@@ -3,6 +3,7 @@ import os
 import whisper
 import json # used to visualize output
 from typing import Iterator, TextIO
+import time
 
 def vid_to_audio(file):
     '''extract audio from video using ffmpeg'''
@@ -67,8 +68,26 @@ def whisper_result_to_srt(whisper_result):
 
 if __name__ == "__main__":
     '''main function'''
+
+
+    start_time = time.time()
     
+    print("Getting file name...")
     file = sys.argv[1]
+    
+    print("Getting working directory...")
     dir = get_working_dir()
+    
+    print("Transcribing video with Whisper...")
     result, json_object = whisper_transcribe(file)
+    
+    print("Turning transcription into SRT subtitle file... This may take long, please wait...")
     whisper_result_to_srt(result) 
+    
+    
+    end_time = time.time()
+    runtime = end_time - start_time
+    
+    os.sys("clear")
+    print(f"Done! Please check the SRT file in the working directory.")
+    print(f"Runtime: {runtime} seconds")
