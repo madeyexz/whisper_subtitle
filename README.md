@@ -10,5 +10,9 @@ Notice:
 This project is currently under construction and would probably be updated regularly.
 
 
+As of the time writing, this project is workable. Yet some trivial problems shall be fixed soon.
+
+
+This project is partially based on [m1guelpf/auto-subtitle](https://github.com/m1guelpf/auto-subtitle).
 
 @12:00PM 2023-04-10
