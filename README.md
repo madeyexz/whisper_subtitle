@@ -2,17 +2,21 @@
 [![zh](https://img.shields.io/badge/lang-zh-blue.svg)](https://github.com/madeyexz/whisper_subtitle/blob/main/README.zh.md)
 
 
-# Project Abstract
+## Project Abstract
 
-This project uses Whisper from OpenAI to generate video subtitles automatically. This can be used to add subtitles to Course Lectures so that we can watch lectures 3x faster or be able to search, rewind the lecture via keywords.
+This project uses [openai/Whisper](https://github.com/openai/whisper) from OpenAI to generate video subtitles automatically. 
 
-Notice:
-This project is currently under construction and would probably be updated regularly.
+This project adapted some codes from [m1guelpf/auto-subtitle](https://github.com/m1guelpf/auto-subtitle).
+
+## Application of This Project
+- Generate time-stamped subtitles for your video. Would be helpful in video editing.
+- Add subtitles to Lesson Recordings 3x faster by reading subtitles instead of listening. You may also navigate lectures through keywords.
+## Installation
 
 
-As of the time writing, this project is workable. Yet some trivial problems shall be fixed soon.
 
 
-This project is partially based on [m1guelpf/auto-subtitle](https://github.com/m1guelpf/auto-subtitle).
+
+
 
 @16:00PM 2023-04-10
