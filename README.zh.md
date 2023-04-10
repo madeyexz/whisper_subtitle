@@ -22,9 +22,9 @@
 pip install whisper, ffmpeg
 # 或者
 pip3 install whisper, ffmpeg
+```
 
 安装 whisper 可能需要一些时间，请耐心等待。
-```
 ## 使用说明
 非常简单，只需在终端中复制并粘贴以下命令。
 
