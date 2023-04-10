@@ -1,5 +1,5 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/madeyexz/https://github.com/madeyexz/whisper_subtitle/README.md)
-[![zh](https://img.shields.io/badge/lang-zh-blue.svg)](https://github.com/madeyexz/https://github.com/madeyexz/whisper_subtitle/README.zh.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/madeyexz/whisper_subtitle/blob/main/README.md)
+[![zh](https://img.shields.io/badge/lang-zh-blue.svg)](https://github.com/madeyexz/whisper_subtitle/blob/main/README.zh.md)
 
 
 # Project Abstract
@@ -11,4 +11,4 @@ This project is currently under construction and would probably be updated regul
 
 
 
-@11:35AM 2023-04-10
+@12:00PM 2023-04-10
