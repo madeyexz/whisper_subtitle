@@ -15,4 +15,4 @@ As of the time writing, this project is workable. Yet some trivial problems shal
 
 This project is partially based on [m1guelpf/auto-subtitle](https://github.com/m1guelpf/auto-subtitle).
 
-@12:00PM 2023-04-10
+@16:00PM 2023-04-10

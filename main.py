@@ -22,7 +22,7 @@ def whisper_transcribe(file="{}/audio.mp3".format(dir)):
     return result, json_object
 
 def whisper_result_preview_json(json_object):
-    '''useful for debugging, preview the result in json format'''
+    '''useful for debugging, preview the result in json format, this function is not used in the main function'''
     with open("result.json", "w") as f:
         f.write(json_object)
     return
@@ -56,10 +56,10 @@ def write_srt(transcript: Iterator[dict], file: TextIO):
             flush=True,
         )
 
-
 def whisper_result_to_srt(whisper_result):
-    '''convert whisper result to SRT format'''
-    with open("subtitle.srt", "w", encoding="utf-8") as srt:
+    '''converts whisper result to SRT format'''
+    name = file.split(".")[0]
+    with open("{}.srt".format(name), "w", encoding="utf-8") as srt:
         write_srt(whisper_result["segments"], file=srt)
     return
 
@@ -68,14 +68,7 @@ def whisper_result_to_srt(whisper_result):
 if __name__ == "__main__":
     '''main function'''
     
-    
-    # file = sys.argv[1]
-    # file = "/Users/ianhsiao/Documents/AI_learning/Whisper_Subtitle/sample_audio/sample1.flac"
-    file = "/Users/ianhsiao/Documents/AI_learning/Whisper_Subtitle/sample_audio/Surge is Incredibly Good Right Now.mp4"
+    file = sys.argv[1]
     dir = get_working_dir()
     result, json_object = whisper_transcribe(file)
-    whisper_result_to_srt(result)
-    
-    # whisper_result_preview_json(json_object)
-    
-    # print(result["text"])
+    whisper_result_to_srt(result) 
