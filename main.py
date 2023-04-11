@@ -15,10 +15,22 @@ def get_working_dir():
     working_dir = os.getcwd()
     return working_dir
 
-def whisper_transcribe(file="{}/audio.mp3".format(dir)):
+def whisper_transcribe_auto_lang(file="{}/audio.mp3".format(dir)):
     '''transcribe audio to text using whisper'''
     model = whisper.load_model("base")
-    result = model.transcribe(file)
+    result = model.transcribe(file, fp16=False)
+    json_object = json.dumps(result, indent=4)
+    return result, json_object
+def whisper_transcribe_en(file="{}/audio.mp3".format(dir)):
+    '''transcribe audio to text using whisper'''
+    model = whisper.load_model("base")
+    result = model.transcribe(file, fp16 = False, language="English")
+    json_object = json.dumps(result, indent=4)
+    return result, json_object
+def whisper_transcribe_zh(file="{}/audio.mp3".format(dir)):
+    '''transcribe audio to text using whisper'''
+    model = whisper.load_model("base")
+    result = model.transcribe(file, fp16 = False, language="Chinese")
     json_object = json.dumps(result, indent=4)
     return result, json_object
 
@@ -64,30 +76,47 @@ def whisper_result_to_srt(whisper_result):
         write_srt(whisper_result["segments"], file=srt)
     return
 
-
+def print_wait():
+    print("Transcribing video with Whisper... This may take long, please wait...")
+    return
 
 if __name__ == "__main__":
     '''main function'''
-
-
-    start_time = time.time()
-    
-    print("Getting file name...")
-    file = sys.argv[1]
-    
     print("Getting working directory...")
     dir = get_working_dir()
+
+    start_time = time.time()
+    if len(sys.argv) == 2:
+        '''default scenario, no language specified, proceeds to auto detect language'''
+        print("no language specified, proceeds with base model to auto select...")
+        print("Getting file name...")
+        file = sys.argv[1]
+        print_wait()
+        result, json_object = whisper_transcribe_auto_lang(file)
+
+    elif len(sys.argv) == 3 and sys.argv[1] in ["-zh", "-en"]:
+        file = sys.argv[2]
+        if sys.argv[1] == "-zh":
+            print("model selected: base-zh")
+            print_wait()
+            result, json_object = whisper_transcribe_zh(file)
+        elif sys.argv[1] == "-en":
+            print("model selected: base-en")
+            print_wait()
+            result, json_object = whisper_transcribe_en(file)
+        else:
+            sys.exit("I don't know how you reached here")
+            
+    else:
+        sys.exit("Invalid arguments. Please use -zh or -en or visit https://github.com/madeyexz/whisper_subtitle/ for usage information.")
+
     
-    print("Transcribing video with Whisper...")
-    result, json_object = whisper_transcribe(file)
-    
-    print("Turning transcription into SRT subtitle file... This may take long, please wait...")
+    print("Turning transcription into SRT subtitle file... ")
     whisper_result_to_srt(result) 
-    
-    
+        
     end_time = time.time()
     runtime = end_time - start_time
      
     os.system("clear")
-    print("Done! Please check the SRT file in the working directory.")
-    print("Runtime: {} seconds".format(runtime))
+    print("Done! Please check the SRT file in the working directory: {}".format(dir))
+    print("Runtime: {} seconds, or {} minutes".format(runtime, runtime/60))
