@@ -89,5 +89,5 @@ if __name__ == "__main__":
     runtime = end_time - start_time
      
     os.system("clear")
-    print(f"Done! Please check the SRT file in the working directory.")
-    print(f"Runtime: {runtime} seconds")
+    print("Done! Please check the SRT file in the working directory.")
+    print("Runtime: {} seconds".format(runtime))
