@@ -38,6 +38,10 @@ It's fairly simple, just copy and paste the following commands in your terminal.
    ``` zsh
    python3 main.py -LanguageCode video_path
    ```
+   e.g. 
+   ```python
+   python3 main.py -en video.mp4
+   ```
 3. Collect the result. The result will be saved in the same directory as the video file and will be named as the video file name with `.srt` extension.
 4. Play the video with subtitles. You can use VLC or any other video player. Just put the `.srt` subtitle file in the same directory with the original video and play the video via the video player. Also, check if the subtitle file has the same name with the video.
 

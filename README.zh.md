@@ -39,6 +39,9 @@
     ``` python
     python3 main.py -LanguageCode video_path
     ```
-
+    例如：
+   ```python
+   python3 main.py -en video.mp4
+   ```
 3. 收集结果。结果将保存在与视频文件相同的目录中，并以视频文件名和 `.srt` 扩展名命名。
 播放带有字幕的视频。您可以使用 VLC 或任何其他视频播放器。只需将 `.srt `字幕文件放在原始视频的同一目录中，并通过视频播放器播放视频即可。同时，请确保字幕文件与视频名称相同。
