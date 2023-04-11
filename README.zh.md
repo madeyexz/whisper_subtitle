@@ -8,6 +8,7 @@
 - 使用 [openai/Whisper](https://github.com/openai/whisper) 提供的人工智能技术，自动生成视频字幕。
 - 从 [m1guelpf/auto-subtitle](https://github.com/m1guelpf/auto-subtitle) 中适配了一些代码。
 - 使用 [openai/Whisper](https://github.com/openai/whisper) 的 [基础模型](https://github.com/openai/whisper#available-models-and-languages)，该模型支持多种语言且运行速度较快。如果您想使用更小的模型，可以在 `main.py` 中更改模型为 `tiny`。但准确性会降低。
+- 已经在 8 分钟的 YouTube 视频上进行了测试。 在我的 Mac（CPU, Quad-Core Intel Core i5）上生成字幕大约需要 2 分钟。
 
 ## 应用场景
 - 为视频生成带有时间戳的字幕，可简化视频编辑。
