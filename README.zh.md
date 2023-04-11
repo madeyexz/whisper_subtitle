@@ -19,26 +19,26 @@
 依赖项：
 1. `ffmpeg`：用于从视频中提取音频。
 2. `whisper`：用于从音频中生成文本。
-``` bash
-pip install whisper, ffmpeg
-# 或者
-pip3 install whisper, ffmpeg
-```
+    ``` bash
+    pip install whisper, ffmpeg
+    # 或者
+    pip3 install whisper, ffmpeg
+    ```
 
 安装 `whisper` 可能需要一些时间，请耐心等待。
 ## 使用说明
 非常简单，只需在终端中复制并粘贴以下命令。
 
 1. 下载本项目：
-``` bash
-git clone https://github.com/madeyexz/whisper_subtitle.git
-```
+    ``` bash
+    git clone https://github.com/madeyexz/whisper_subtitle.git
+    ```
 
 2. 运行 `main.py`，其中 `video_path` 是您的视频文件路径。
 如果您是第一次使用 `whisper`（特别是使用 `base` 模型），下载模型可能需要一些时间。请耐心等待。
-``` python
-python3 main.py video_path
-```
+    ``` python
+    python3 main.py video_path
+    ```
 
 3. 收集结果。结果将保存在与视频文件相同的目录中，并以视频文件名和 `.srt` 扩展名命名。
 播放带有字幕的视频。您可以使用 VLC 或任何其他视频播放器。只需将 `.srt `字幕文件放在原始视频的同一目录中，并通过视频播放器播放视频即可。同时，请确保字幕文件与视频名称相同。

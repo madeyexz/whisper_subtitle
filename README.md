@@ -19,24 +19,24 @@ This project
 Dependency:
 1. `ffmpeg`: used to extract audio from video
 2. `whisper`: used to generate text from audio
-``` bash
-pip install whisper, ffmpeg
-# or
-pip3 install whisper, ffmpeg
-```
+   ``` bash
+   pip install whisper, ffmpeg
+   # or
+   pip3 install whisper, ffmpeg
+   ```
 It might take a while to install `whisper`. Please be patient.
 ## Usage
 It's fairly simple, just copy and paste the following commands in your terminal.
 1. Download the project
-``` bash
-git clone https://github.com/madeyexz/whisper_subtitle.git
-```
+   ``` bash
+   git clone https://github.com/madeyexz/whisper_subtitle.git
+   ```
 2. Run `main.py`, where video_path is the path to your video file.
    - If its your first project with `whisper` (especially with `base` model), it will take a while to download the model. Please be patient.
 
-``` zsh
-python3 main.py video_path
-```
+   ``` zsh
+   python3 main.py video_path
+   ```
 3. Collect the result. The result will be saved in the same directory as the video file and will be named as the video file name with `.srt` extension.
 4. Play the video with subtitles. You can use VLC or any other video player. Just put the `.srt` subtitle file in the same directory with the original video and play the video via the video player. Also, check if the subtitle file has the same name with the video.
 
