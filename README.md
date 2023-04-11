@@ -31,11 +31,12 @@ It's fairly simple, just copy and paste the following commands in your terminal.
    ``` bash
    git clone https://github.com/madeyexz/whisper_subtitle.git
    ```
-2. Run `main.py`, where video_path is the path to your video file.
+2. Run `main.py`, where `video_path` is the path to your video file and `-LanguageCode` is where you choose the language of the subtitles. 
+   - Currently only `-en` and `-zh` is available for English and Chinese subtitles respectively. However if you don't specify the language, it will choose language automatically.
    - If its your first project with `whisper` (especially with `base` model), it will take a while to download the model. Please be patient.
 
    ``` zsh
-   python3 main.py video_path
+   python3 main.py -LanguageCode video_path
    ```
 3. Collect the result. The result will be saved in the same directory as the video file and will be named as the video file name with `.srt` extension.
 4. Play the video with subtitles. You can use VLC or any other video player. Just put the `.srt` subtitle file in the same directory with the original video and play the video via the video player. Also, check if the subtitle file has the same name with the video.

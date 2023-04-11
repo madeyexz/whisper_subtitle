@@ -34,10 +34,10 @@
     git clone https://github.com/madeyexz/whisper_subtitle.git
     ```
 
-2. 运行 `main.py`，其中 `video_path` 是您的视频文件路径。
-如果您是第一次使用 `whisper`（特别是使用 `base` 模型），下载模型可能需要一些时间。请耐心等待。
+2. 运行 `main.py`，其中 `video_path` 是您的视频文件路径。`-en` 和 `-zh` 语言选项，分别用于英语和中文。如果不指定语言，那么系统会自动判断。
+- 如果您是第一次使用 `whisper`（特别是使用 `base` 模型），下载模型可能需要一些时间。请耐心等待。
     ``` python
-    python3 main.py video_path
+    python3 main.py -LanguageCode video_path
     ```
 
 3. 收集结果。结果将保存在与视频文件相同的目录中，并以视频文件名和 `.srt` 扩展名命名。
