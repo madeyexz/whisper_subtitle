@@ -3,6 +3,8 @@
 
 
 > *This project is only available to Linux/MacOS users.*
+
+# Whisper Subtitle Generator
 ## About This Project 
 This project
   
