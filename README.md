@@ -3,7 +3,7 @@
 
 
 > *This project is only available to Linux/MacOS users.*
-## Project Abstract
+## About This Project 
 This project
   
 - uses [openai/Whisper](https://github.com/openai/whisper) from OpenAI to generate video subtitles automatically.
